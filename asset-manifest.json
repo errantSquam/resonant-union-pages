@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.75e51ae3.css",
-    "main.js": "/react-gh-pages/static/js/main.2e1ab9f0.js",
-    "static/js/453.26cd6a20.chunk.js": "/react-gh-pages/static/js/453.26cd6a20.chunk.js",
-    "static/media/logo.svg": "/react-gh-pages/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/react-gh-pages/index.html",
-    "main.75e51ae3.css.map": "/react-gh-pages/static/css/main.75e51ae3.css.map",
-    "main.2e1ab9f0.js.map": "/react-gh-pages/static/js/main.2e1ab9f0.js.map",
-    "453.26cd6a20.chunk.js.map": "/react-gh-pages/static/js/453.26cd6a20.chunk.js.map"
+    "main.css": "/resonant-union-pages/static/css/main.75e51ae3.css",
+    "main.js": "/resonant-union-pages/static/js/main.c03b5a67.js",
+    "static/js/453.26cd6a20.chunk.js": "/resonant-union-pages/static/js/453.26cd6a20.chunk.js",
+    "static/media/logo.svg": "/resonant-union-pages/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/resonant-union-pages/index.html",
+    "main.75e51ae3.css.map": "/resonant-union-pages/static/css/main.75e51ae3.css.map",
+    "main.c03b5a67.js.map": "/resonant-union-pages/static/js/main.c03b5a67.js.map",
+    "453.26cd6a20.chunk.js.map": "/resonant-union-pages/static/js/453.26cd6a20.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.75e51ae3.css",
-    "static/js/main.2e1ab9f0.js"
+    "static/js/main.c03b5a67.js"
   ]
 }
