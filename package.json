@@ -1,7 +1,7 @@
 {
   "name": "resonant-union",
   "version": "0.1.0",
-  "homepage": "https://errantsquam.github.io/resonant-union-pages/",
+  "homepage": "https://errantsquam.github.io/",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
