@@ -8,7 +8,7 @@ const Intro = () => {
   <div className="py-4 text-white ">
 
     <div>
-      <div className="font-dmSerif">
+      <div className="font-dmSerif select-none">
         <span className="text-2xl">We are</span>
         <div className="text-9xl text-orange-500">
           <span><span className="text-amber-500">R</span>ESONANT</span>
