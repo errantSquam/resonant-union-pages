@@ -32,7 +32,7 @@ const Intro = () => {
 
       <br />
 
-      <div className="flex flex-row items-center space-x-32">
+      <div className="flex flex-row items-center space-x-24">
         <img src="albums/compressed-album-images/Cover.png" className="w-48 h-48" />
 
         <div className="flex flex-col space-y-4 z-10">
