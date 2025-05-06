@@ -3,7 +3,7 @@ import Navbar from "../components/navbar";
 
 function Root() {
     return (
-      <div className="bg-slate-950 min-h-screen">
+      <div className="bg-gradient-to-bl from-blue-600 from-0% to-slate-950 to-40% min-h-screen">
         <Navbar />
         <Outlet />
       </div>
