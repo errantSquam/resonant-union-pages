@@ -1,6 +1,6 @@
 import React from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
-
+import { JrpgGradientBox } from "../components/jrpgbox";
 
 
 const SocmedIcon = ({link, iconName}) => {
@@ -28,6 +28,7 @@ const Intro = () => {
 
     <div className="flex flex-row items-center space-x-32">
       <img src="albums/compressed-album-images/Cover.png" className="w-48 h-48" />
+
       <div className = "flex flex-col space-y-4">
         <div className="flex text-right font-robotoSlab">
           <div> Resonant Union is a music collective made by VGM fans across the world! <br />
@@ -36,6 +37,7 @@ const Intro = () => {
             We joined together to celebrate the legacies of soundtracks we enjoy<br />
             through a rich variety of arrangements, and our own original works.</div>
         </div>
+        
         <div className="flex justify-end text-3xl space-x-4">
           {/*i probably should have mapped this */}
           <SocmedIcon link = "https://resonantunion.bandcamp.com/" iconName = "fa:bandcamp"/>
@@ -44,6 +46,7 @@ const Intro = () => {
           <SocmedIcon link = "https://twitter.com/ResonantUnion" iconName = "mdi:twitter"/>
         </div>
       </div>
+
     </div>
 
   </div>
