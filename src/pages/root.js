@@ -3,7 +3,7 @@ import Navbar from "../components/navbar";
 
 function Root() {
     return (
-      <div>
+      <div className="bg-slate-950 min-h-screen">
         <Navbar />
         <Outlet />
       </div>
