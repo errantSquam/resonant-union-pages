@@ -9,7 +9,7 @@ const Intro = () => {
 
     <div>
       <div className="font-dmSerif select-none">
-        <span className="text-2xl">We are</span>
+        <span className="text-3xl">We are</span>
         <div className="text-9xl text-orange-500">
           <span><span className="text-amber-500">R</span>ESONANT</span>
           <br />
