@@ -16,10 +16,10 @@ const Intro = () => {
     <div>
       <div className="font-dmSerif select-none">
         <span className="text-3xl">We are</span>
-        <div className="text-9xl text-orange-500">
-          <span><span className="text-amber-500">R</span>ESONANT</span>
+        <div className="text-8xl text-orange-500">
+          <span><span className="text-amber-500 text-9xl">R</span>ESONANT</span>
           <br />
-          <span><span className="text-amber-500">U</span>NION</span>
+          <span><span className="text-amber-500 text-9xl">U</span>NION</span>
         </div>
       </div>
     </div>
