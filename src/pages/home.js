@@ -3,6 +3,12 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 
 
 
+const SocmedIcon = ({link, iconName}) => {
+  return <div className = "transition duration-100 hover:scale-110 hover:text-orange-400 text-orange-600">
+          <a href = {link}><Icon icon={iconName} /></a>
+          </div>
+}
+
 const Intro = () => {
   return <div>
   <div className="py-4 text-white ">
@@ -30,11 +36,12 @@ const Intro = () => {
             We joined together to celebrate the legacies of soundtracks we enjoy<br />
             through a rich variety of arrangements, and our own original works.</div>
         </div>
-        <div className="flex justify-end text-3xl text-orange-600 space-x-4">
-          <Icon icon="fa:bandcamp" />
-          <Icon icon="mdi:youtube" />
-          <Icon icon="ri:bluesky-fill" />
-          <Icon icon="mdi:twitter" />
+        <div className="flex justify-end text-3xl space-x-4">
+          {/*i probably should have mapped this */}
+          <SocmedIcon link = "https://resonantunion.bandcamp.com/" iconName = "fa:bandcamp"/>
+          <SocmedIcon link = "https://www.youtube.com/@ResonantUnion" iconName = "mdi:youtube"/>
+          <SocmedIcon link = "https://bsky.app/profile/resonantunion.bsky.social" iconName = "ri:bluesky-fill"/>
+          <SocmedIcon link = "https://twitter.com/ResonantUnion" iconName = "mdi:twitter"/>
         </div>
       </div>
     </div>
