@@ -7,21 +7,11 @@ import { useMediaQuery } from "react-responsive";
 import { useInterval } from "usehooks-ts";
 import { Fade } from "react-slideshow-image";
 import 'react-slideshow-image/dist/styles.css'
-
+import SpinningDisc from "../components/spinningdisc";
+import { textArray, reviewsArray } from "../const/placeholder";
 
 //TODO: Migrate this to a .json
-const textArray = ["The ultimate ZeroRanger arrange album.", "Enjoy nearly 3.5 hours of arrangements from System Erasure's iconic OST to ZeroRanger by eebrozgi!",
-  "Journey through the cycle of ZeroRanger with 48 tracks, arranged by 44 incredible ZeroArrangers, featuring live performances from several musicians and vocalists.",
-  "2025 Game Music Remix Award “Best Album” Winner!"
-]
 
-const reviewsArray = [
-  "“it scared me it was so good. every track is special and so transformative in the best way”",
-  "“a masterclass collection of amazing artists making an all-timer VGM celebration of an indie classic. absolutely not to be missed, this could be the album of the year.”",
-  "“The amount of raw talent on this album is so insane that I started using Bandcamp just to get this album and am using it as a reference for what artists to look for if I'm interested in more music. 10/10 no notes”",
-  "“What can I even say... I am blown away by the utter artistry and care showcased in this project. What an amazing display of creativity and dedication.”",
-  "“How can one album contain so much concentrated fire? May you attain enlightenment.”"
-]
 
 
 const SocmedIcon = ({ link, iconName }) => {
@@ -31,21 +21,7 @@ const SocmedIcon = ({ link, iconName }) => {
 }
 
 
-const SpinningDisc = ({image}) => {
-  return <div className="z-10">
 
-            <div className="relative w-full flex justify-center items-center">
-              <div className="rounded-full overflow-hidden h-4 w-4 z-20 absolute bg-black" />
-              <div className="rounded-full overflow-hidden h-12 w-12 z-10 absolute bg-white/50 border border-2 border-gray-700" />
-              <div className="rounded-full overflow-hidden h-48 w-48">
-                <img src={image}
-                  class="rotating" />
-              </div>
-              
-            </div>
-
-          </div>
-}
 
 const AlbumCarousel = () => {
 
@@ -123,15 +99,21 @@ const IconList = () => {
 
 const IntroMobile = () => {
   return <div>
-    <div className="py-4 px-4 text-white items-center justify-center">
+    <div className="px-4 text-white items-center justify-center">
 
       <div>
-        <div className="font-dmSerif select-none justify-center text-center">
+        <div className="font-dmSerif select-none flex flex-col justify-center items-center text-center">
+
           <span className="text-xl -mb-1 font-pixelify">We are</span>
-          <div className="text-5xl text-orange-500">
-            <span><span className="text-amber-500 text-6xl">R</span>ESONANT</span> &nbsp;
-            <span><span className="text-amber-500 text-6xl">U</span>NION</span>
-          </div>
+            <div className="text-4xl text-orange-500">
+              <span><span className="text-amber-500 text-5xl">R</span>ESONANT</span> &nbsp;
+              <span><span className="text-amber-500 text-5xl">U</span>NION</span>
+            </div>
+
+          {/*<img src = "RU.png" className = "w-20 h-20 animate-bounce mt-6"/>*/}
+          {/*<div className = "scale-50 scale-y-[0.2] -my-10 -mx-10 relative">
+            <SpinningDisc image = "RU.png"/>
+          </div>*/}
         </div>
       </div>
 
@@ -139,8 +121,9 @@ const IntroMobile = () => {
 
         <div className="flex flex-col space-y-4 z-10 mx-2">
           <JrpgGradientBox>
-            <div className="flex text-center font-robotoSlab">
+            <div className="flex flex-col items-center text-center font-robotoSlab">
               <IntroBlurb />
+              <Icon icon="raphael:arrowdown" className = "mt-2 animate-bounce"/>
             </div>
           </JrpgGradientBox>
 
