@@ -302,13 +302,13 @@ const HomeDesktop = () => {
   
 
 
-    <div className = "relative min-w-full">
+    <div className = "min-w-full">
       
-      <div className="absolute bg-gradient-to-b from-slate-950/0 from-0% via-slate-950/100 via-90% 
-      to-slate-950/100 to-100% min-w-full h-full"/>
+      <div className="absolute bg-gradient-to-b from-slate-950/0 from-0% via-slate-950/100 via-80% 
+      to-slate-950/100 to-90% min-w-full h-full"/>
     <Intro />
     </div>
-    <div className = "relative min-w-full">
+    <div className = "min-w-full">
       <img src = "No+Planet+Color.png" className = "absolute min-w-full h-full"/>
 
       <div className="absolute bg-gradient-to-b from-slate-950/100 from-10% 
