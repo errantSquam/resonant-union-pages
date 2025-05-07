@@ -8,7 +8,7 @@ import { useInterval } from "usehooks-ts";
 import { Fade } from "react-slideshow-image";
 import 'react-slideshow-image/dist/styles.css'
 import SpinningDisc from "../components/spinningdisc";
-import { textArray, reviewsArray } from "../const/placeholder";
+import { textArray, reviewsArray, imageArray } from "../const/placeholder";
 
 //TODO: Migrate this to a .json
 
@@ -25,7 +25,6 @@ const SocmedIcon = ({ link, iconName }) => {
 
 const AlbumCarousel = () => {
 
-  const imageArray = ["Days.jpg", "Falcafe.jpg", "FBR1.jpg", "FBR2.jpg", "FBR3.jpg", "GuruGuru.jpg", "PAW1.jpg", "PAW2.jpg", "Resaga.jpg", "ZeroRanger.png"]
 
   const [imageIndex, setImageIndex] = useState(0)
 
@@ -377,14 +376,18 @@ const HomeMobile = () => {
   return <div className="flex flex-col min-w-full gap-y-4 items-center">
     
     
-    <div className = "min-w-full relative z-20">
+    <div className = "min-w-full">
     <div className="absolute bg-gradient-to-b from-slate-950/0 from-0% via-slate-950/100 via-70% 
       to-slate-950/100 to-90% min-w-full h-full"/>
+      <div className = "relative z-20">
       <IntroMobile />
+      </div>
     </div>
 
     <div className = "flex flex-col items-center justify-center text-center relative z-10 bg-slate-950 w-full h-full py-16 -my-16">
       <div className = "scale-50 scale-y-[0.2] -my-16 -mx-10 relative">
+        
+      
               <SpinningDisc image = "RU.png"/>
       </div>
       {/*<div className = "font-pixelify text-white/50 text-xs">Keep scrolling...</div>*/}

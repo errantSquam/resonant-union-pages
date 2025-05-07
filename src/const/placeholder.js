@@ -10,3 +10,6 @@ export const reviewsArray = [
     "“What can I even say... I am blown away by the utter artistry and care showcased in this project. What an amazing display of creativity and dedication.”",
     "“How can one album contain so much concentrated fire? May you attain enlightenment.”"
   ]
+
+
+export const imageArray = ["Days.jpg", "Falcafe.jpg", "FBR1.jpg", "FBR2.jpg", "FBR3.jpg", "GuruGuru.jpg", "PAW1.jpg", "PAW2.jpg", "Resaga.jpg", "ZeroRanger.png"]
