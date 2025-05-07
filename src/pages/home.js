@@ -30,6 +30,23 @@ const SocmedIcon = ({ link, iconName }) => {
   </div>
 }
 
+
+const SpinningDisc = ({image}) => {
+  return <div className="z-10">
+
+            <div className="relative w-full flex justify-center items-center">
+              <div className="rounded-full overflow-hidden h-4 w-4 z-20 absolute bg-black" />
+              <div className="rounded-full overflow-hidden h-12 w-12 z-10 absolute bg-white/50 border border-2 border-gray-700" />
+              <div className="rounded-full overflow-hidden h-48 w-48">
+                <img src={image}
+                  class="rotating" />
+              </div>
+              
+            </div>
+
+          </div>
+}
+
 const AlbumCarousel = () => {
 
   const imageArray = ["Days.png", "Falcafe.png", "FBR1.png", "FBR2.png", "FBR3.png", "GuruGuru.png", "PAW1.png", "PAW2.png", "Resaga.png", "ZeroRanger.png"]
@@ -50,16 +67,33 @@ const AlbumCarousel = () => {
   )*/}
 
 
-  return <div className = "w-48 h-48 slide-container">
+  return <div className = "flex flex-row">
+    <div className="w-48 h-48 rounded overflow-hidden">
       <Fade
-      arrows = {false}
-      duration = {1500}
-      canSwipe = {true}>
+        arrows={false}
+        duration={1500}
+        infinite={true}>
         {imageArray.map((image) => {
-        return <div><img src={`albums/compressed-album-images/${image}`} /></div>
+          return <div>
+            <img src={`albums/compressed-album-images/${image}`}/>
+
+          </div>
         })
         }
       </Fade>
+    </div>
+    {/*
+    <div className="w-48 h-48 -mt-[100%] -ml-[70%] bg-black">
+      <div>
+
+            <div className = "relative w-full z-30">
+              <div className="rounded overflow-hidden w-48 h-48 flex items-center justify-center bg-slate-700">
+                <img src='RU.png' className = "w-20 h-20"/>
+              </div>
+            </div>
+
+          </div>
+    </div>*/}
   </div>
 
 }
@@ -131,12 +165,12 @@ const Intro = () => {
     setLoaded(true);
   }
 
-  useEffect (() => {
+  useEffect(() => {
     handleLoad()
   }, [])
-  
 
-  return <div className = "flex flex-col items-center">
+
+  return <div className="flex flex-col items-center">
 
     <div className="py-4 flex flex-col">
 
@@ -146,7 +180,7 @@ const Intro = () => {
 
       <div>
         <div className={`font-dmSerif select-none z-10 relative transition duration-[1.6s] ease-out ${loaded ? 'opacity-100 -translate-x-0' : 'opacity-0 -translate-x-32'}`}>
-          <div className = "flex flex-row space-x-2 items-center">
+          <div className="flex flex-row space-x-2 items-center">
             {/*<img src = "pointer.gif" className = "h-6"/>*/}
             <span className="text-3xl font-pixelify">We are</span>
 
@@ -154,7 +188,7 @@ const Intro = () => {
           <div className={`text-8xl text-orange-500 transition duration-[1.5s] ease-out ${loaded ? 'opacity-100 -translate-x-0' : 'opacity-30 -translate-x-32'}`}>
             <span><span className="text-amber-500 text-9xl">R</span>ESONANT</span>
             <br />
-            <div className = "flex flex-row space-x-2 items-center">
+            <div className="flex flex-row space-x-2 items-center">
               <span><span className="text-amber-500 text-9xl">U</span>NION</span>
               {/*<img src = "pointer_flipped.gif" className = "h-6 mt-6"/>*/}
             </div>
@@ -166,17 +200,17 @@ const Intro = () => {
       <br />
 
       <div className={`flex flex-row items-center space-x-24 relative z-10 transition duration-[2s] ${loaded ? 'opacity-100' : 'opacity-0'}`}>
-        
-        <AlbumCarousel/>
-        
+
+        <AlbumCarousel />
+
         <div className="flex flex-col space-y-4 z-10">
           <div className="flex text-right font-robotoSlab">
             <IntroBlurb />
 
           </div>
-          <div className = "flex flex-row items-center justify-end space-x-2">
-            <div className = "font-pixelify text-sm">Visit our socials!</div>
-            <img src = "pointer.gif" className = "h-6"/>
+          <div className="flex flex-row items-center justify-end space-x-2">
+            <div className="font-pixelify text-sm">Visit our socials!</div>
+            <img src="pointer.gif" className="h-6" />
             <IconList />
           </div>
 
@@ -229,7 +263,7 @@ const FeaturedAlbum = () => {
         </div>
         <div className="flex flex-col items-center text-center gap-y-4">
           <div className="text-4xl font-dmSerif text-amber-500"> ZeroRanger Arranged Album<br />
-          <span className = "text-emerald-600">-GREEN ARRANGE-</span>
+            <span className="text-emerald-600">-GREEN ARRANGE-</span>
           </div>
           {
             textArray.map((text) => { return <div className="w-[32rem] font-robotoSlab"><JrpgGradientBox>{text}</JrpgGradientBox> </div> })
@@ -258,6 +292,7 @@ const FeaturedAlbum = () => {
       </div>
 
       <div className="font-pixelify flex flex-row items-center text-center justify-center select-none">
+        
         Can't get enough? View more of our albums &nbsp;<JrpgGradientButton>HERE</JrpgGradientButton>
       </div>
     </div>
@@ -310,7 +345,7 @@ const FeaturedAlbumMobile = () => {
 
   return <div className="flex flex-col justify-center items-center text-center space-y-6">
     <div className="text-2xl font-dmSerif text-amber-500"> ZeroRanger Arranged Album<br />
-    <span className = "text-emerald-600">-GREEN ARRANGE-</span></div>
+      <span className="text-emerald-600">-GREEN ARRANGE-</span></div>
 
     <div>
       <iframe className="w-40 h-40"
@@ -365,27 +400,29 @@ const HomeMobile = () => {
 
 const HomeDesktop = () => {
   return <div className="flex flex-col min-w-full">
-  
 
 
-    <div className = "min-w-full">
-      
+
+    <div className="min-w-full">
+
       <div className="absolute bg-gradient-to-b from-slate-950/0 from-0% via-slate-950/100 via-70% 
       to-slate-950/100 to-90% min-w-full h-full"/>
-    <Intro />
+      <Intro />
     </div>
-    <div className = "min-w-full">
-      <img src = "ga_bg_animation.gif" className = "absolute min-w-full h-full"/>
+
+    <div className="min-w-full">
+      <img src="ga_bg_animation.gif" className="absolute min-w-full h-full" />
 
       <div className="absolute bg-gradient-to-b from-slate-950/100 from-10% 
       to-black/0 to-20% min-w-full h-full"/>
-    
+
       <div className="absolute bg-gradient-to-b from-black/0 from-80% 
       to-slate-950/100 to-90% min-w-full h-full"/>
 
       <FeaturedAlbum />
     </div>
 
+    
     <div>
     </div>
   </div>
