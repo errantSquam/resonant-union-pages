@@ -377,10 +377,17 @@ const HomeMobile = () => {
   return <div className="flex flex-col min-w-full gap-y-4 items-center">
     
     
-    <div className = "min-w-full">
+    <div className = "min-w-full relative z-20">
     <div className="absolute bg-gradient-to-b from-slate-950/0 from-0% via-slate-950/100 via-70% 
       to-slate-950/100 to-90% min-w-full h-full"/>
       <IntroMobile />
+    </div>
+
+    <div className = "flex flex-col items-center justify-center text-center relative z-10 bg-slate-950 w-full h-full py-16 -my-16">
+      <div className = "scale-50 scale-y-[0.2] -my-16 -mx-10 relative">
+              <SpinningDisc image = "RU.png"/>
+      </div>
+      {/*<div className = "font-pixelify text-white/50 text-xs">Keep scrolling...</div>*/}
     </div>
     
     <div className="min-w-full z-10 relative">
