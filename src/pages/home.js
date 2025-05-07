@@ -257,7 +257,8 @@ const FeaturedAlbumMobile = () => {
 
 
   return <div className="flex flex-col justify-center items-center text-center space-y-6">
-    <div className="text-2xl font-dmSerif text-amber-500"> ZeroRanger Arranged Album<br />-GREEN ARRANGE-</div>
+    <div className="text-2xl font-dmSerif text-amber-500"> ZeroRanger Arranged Album<br />
+    <span className = "text-green-500">-GREEN ARRANGE-</span></div>
 
     <div>
       <iframe className="w-40 h-40"
