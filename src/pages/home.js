@@ -54,7 +54,7 @@ const IntroMobile = () => {
 
       <div>
         <div className="font-dmSerif select-none justify-center text-center">
-          <span className="text-xl -mb-1">We are</span>
+          <span className="text-xl -mb-1 font-pixelify">We are</span>
           <div className="text-5xl text-orange-500">
             <span><span className="text-amber-500 text-6xl">R</span>ESONANT</span> &nbsp;
             <span><span className="text-amber-500 text-6xl">U</span>NION</span>
@@ -95,11 +95,19 @@ const Intro = () => {
 
       <div>
         <div className="font-dmSerif select-none z-10 relative">
-          <span className="text-3xl">We are</span>
+          <div className = "flex flex-row space-x-2 items-center">
+            {/*<img src = "pointer.gif" className = "h-6"/>*/}
+            <span className="text-3xl font-pixelify">We are</span>
+
+          </div>
           <div className="text-8xl text-orange-500">
             <span><span className="text-amber-500 text-9xl">R</span>ESONANT</span>
             <br />
-            <span><span className="text-amber-500 text-9xl">U</span>NION</span>
+            <div className = "flex flex-row space-x-2 items-center">
+              <span><span className="text-amber-500 text-9xl">U</span>NION</span>
+              {/*<img src = "pointer_flipped.gif" className = "h-6 mt-6"/>*/}
+            </div>
+
           </div>
         </div>
       </div>
@@ -114,8 +122,11 @@ const Intro = () => {
             <IntroBlurb />
 
           </div>
-
-          <IconList />
+          <div className = "flex flex-row items-center justify-end space-x-2">
+            <div className = "font-pixelify text-sm">Visit our socials!</div>
+            <img src = "pointer.gif" className = "h-6"/>
+            <IconList />
+          </div>
 
         </div>
 
@@ -318,6 +329,9 @@ const HomeDesktop = () => {
       to-slate-950/100 to-90% min-w-full h-full"/>
 
       <FeaturedAlbum />
+    </div>
+
+    <div>
     </div>
   </div>
 }
