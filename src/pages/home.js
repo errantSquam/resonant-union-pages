@@ -176,7 +176,9 @@ const FeaturedAlbum = () => {
 
         </div>
         <div className="flex flex-col items-center text-center gap-y-4">
-          <div className="text-4xl font-dmSerif text-amber-500"> ZeroRanger Arranged Album<br />-GREEN ARRANGE-</div>
+          <div className="text-4xl font-dmSerif text-amber-500"> ZeroRanger Arranged Album<br />
+          <span className = "text-green-500">-GREEN ARRANGE-</span>
+          </div>
           {
             textArray.map((text) => { return <div className="w-[32rem] font-robotoSlab"><JrpgGradientBox>{text}</JrpgGradientBox> </div> })
           }
