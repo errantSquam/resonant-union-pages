@@ -177,7 +177,7 @@ const FeaturedAlbum = () => {
         </div>
         <div className="flex flex-col items-center text-center gap-y-4">
           <div className="text-4xl font-dmSerif text-amber-500"> ZeroRanger Arranged Album<br />
-          <span className = "text-green-500">-GREEN ARRANGE-</span>
+          <span className = "text-emerald-600">-GREEN ARRANGE-</span>
           </div>
           {
             textArray.map((text) => { return <div className="w-[32rem] font-robotoSlab"><JrpgGradientBox>{text}</JrpgGradientBox> </div> })
@@ -187,7 +187,7 @@ const FeaturedAlbum = () => {
 
       </div>
       <div className="flex flex-col justify-center items-center text-center space-y-4">
-        <div className="font-robotoSlab text-green-500"> Reviews for -GREEN ARRANGE- on Bandcamp</div>
+        <div className="font-robotoSlab text-emerald-600"> Reviews for -GREEN ARRANGE- on Bandcamp</div>
 
         <div className="flex flex-row justify-center text-center items-center space-x-6 w-[80rem] h-24">
           <div className="hover:text-white text-orange-500 text-4xl select-none"><Icon icon="raphael:arrowleft"
@@ -258,7 +258,7 @@ const FeaturedAlbumMobile = () => {
 
   return <div className="flex flex-col justify-center items-center text-center space-y-6">
     <div className="text-2xl font-dmSerif text-amber-500"> ZeroRanger Arranged Album<br />
-    <span className = "text-green-500">-GREEN ARRANGE-</span></div>
+    <span className = "text-emerald-600">-GREEN ARRANGE-</span></div>
 
     <div>
       <iframe className="w-40 h-40"
@@ -272,7 +272,7 @@ const FeaturedAlbumMobile = () => {
     </div>
 
     <div className="flex flex-col justify-center items-center text-center space-y-4">
-      <div className="font-robotoSlab text-green-500 text-sm"> Reviews for -GREEN ARRANGE- on Bandcamp</div>
+      <div className="font-robotoSlab text-emerald-600 text-sm"> Reviews for -GREEN ARRANGE- on Bandcamp</div>
 
       <div className="flex flex-col justify-center text-center items-center space-y-2">
 
