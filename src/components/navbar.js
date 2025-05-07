@@ -29,7 +29,7 @@ const NavbarMobile = () => {
 
 export default function Navbar() {
 
-    const isMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+    const isMobile = useMediaQuery({ query: '(max-width: 481px)' })
     
     return <div>{isMobile ? <NavbarMobile/> : <NavbarDesktop/>}</div>
     
