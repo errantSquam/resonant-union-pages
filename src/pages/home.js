@@ -326,7 +326,7 @@ const FeaturedAlbumMobile = () => {
   }
 
 
-  return <div className="flex flex-col justify-center items-center text-center space-y-6">
+  return <div className="flex flex-col justify-center items-center text-center z-10 relative space-y-6">
     <div className="text-2xl font-dmSerif text-amber-500"> ZeroRanger Arranged Album<br />
       <span className="text-emerald-600">-GREEN ARRANGE-</span></div>
 
@@ -374,10 +374,27 @@ const FeaturedAlbumMobile = () => {
 }
 
 const HomeMobile = () => {
-  return <div className="flex flex-col gap-y-4 items-center">
-    <IntroMobile />
-    <hr />
-    <FeaturedAlbumMobile />
+  return <div className="flex flex-col min-w-full gap-y-4 items-center">
+    
+    
+    <div className = "min-w-full">
+    <div className="absolute bg-gradient-to-b from-slate-950/0 from-0% via-slate-950/100 via-70% 
+      to-slate-950/100 to-90% min-w-full h-full"/>
+      <IntroMobile />
+    </div>
+    
+    <div className="min-w-full z-10 relative">
+      <img src="ga_bg_animation.gif" className="absolute min-w-full h-full" />
+
+      <div className="absolute bg-gradient-to-b from-slate-950/100 from-10% 
+      to-black/0 to-20% min-w-full h-full"/>
+
+      <div className="absolute bg-gradient-to-b from-black/0 from-80% 
+      to-slate-950/100 to-90% min-w-full h-full"/>
+
+      <div> <FeaturedAlbumMobile /></div>
+
+    </div>
   </div>
 }
 
