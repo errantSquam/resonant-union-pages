@@ -376,7 +376,7 @@ const HomeMobile = () => {
   return <div className="flex flex-col min-w-full gap-y-4 items-center">
     
     
-    <div className = "min-w-full">
+    <div className = "min-w-full relative">
     <div className="absolute bg-gradient-to-b from-slate-950/0 from-0% via-slate-950/100 via-70% 
       to-slate-950/100 to-90% min-w-full h-full"/>
       <div className = "relative z-20">
