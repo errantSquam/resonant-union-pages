@@ -102,7 +102,7 @@ const Intro = () => {
 
     <div className="py-4 flex flex-col">
 
-      <div className={`absolute self-center ml-[40%] transition duration-[1.6s] ease-out ${loaded ? 'opacity-100' : 'opacity-40'}`}>
+      <div className={`absolute self-center ml-[40%] transition duration-[1.6s] ease-out ${loaded ? 'opacity-100' : 'opacity-20'}`}>
         <img src="RU_colorless.png" className="h-96 w-96 relative z-0 select-none" />
       </div>
 
@@ -129,7 +129,7 @@ const Intro = () => {
 
       <div className={`flex flex-row items-center space-x-24 relative z-10 transition duration-[2s] ${loaded ? 'opacity-100' : 'opacity-0'}`}>
         
-        <img src="albums/compressed-album-images/Cover.png" className="w-48 h-48" />
+        <img src="albums/compressed-album-images/PAW1.png" className="w-48 h-48" />
 
         
         <div className="flex flex-col space-y-4 z-10">
