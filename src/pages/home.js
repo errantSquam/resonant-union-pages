@@ -323,7 +323,7 @@ const HomeDesktop = () => {
     <Intro />
     </div>
     <div className = "min-w-full">
-      <img src = "No+Planet+Color.png" className = "absolute min-w-full h-full"/>
+      <img src = "ga_bg_animation.gif" className = "absolute min-w-full h-full"/>
 
       <div className="absolute bg-gradient-to-b from-slate-950/100 from-10% 
       to-black/0 to-20% min-w-full h-full"/>
