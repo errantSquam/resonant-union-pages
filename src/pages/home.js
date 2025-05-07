@@ -304,7 +304,7 @@ const HomeDesktop = () => {
 
     <div className = "min-w-full">
       
-      <div className="absolute bg-gradient-to-b from-slate-950/0 from-0% via-slate-950/100 via-80% 
+      <div className="absolute bg-gradient-to-b from-slate-950/0 from-0% via-slate-950/100 via-70% 
       to-slate-950/100 to-90% min-w-full h-full"/>
     <Intro />
     </div>
@@ -315,7 +315,7 @@ const HomeDesktop = () => {
       to-black/0 to-20% min-w-full h-full"/>
     
       <div className="absolute bg-gradient-to-b from-black/0 from-80% 
-      to-slate-950/100 to-100% min-w-full h-full"/>
+      to-slate-950/100 to-90% min-w-full h-full"/>
 
       <FeaturedAlbum />
     </div>
