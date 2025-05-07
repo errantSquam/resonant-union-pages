@@ -1,6 +1,7 @@
 import React from "react";
+import { useState } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { JrpgGradientBox } from "../components/jrpgbox";
+import { JrpgGradientBox, JrpgGradientButton } from "../components/jrpgbox";
 import { useMediaQuery } from "react-responsive";
 
 const SocmedIcon = ({ link, iconName }) => {
@@ -9,56 +10,68 @@ const SocmedIcon = ({ link, iconName }) => {
   </div>
 }
 
+const IntroBlurb = () => {
+
+  const isMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+
+  return <div className> Resonant Union is a music collective made by VGM fans across the world! <br />
+    (We just so happen to also be musicians.) <br />
+    <br />
+    We joined together to celebrate the legacies of soundtracks we enjoy
+    {!isMobile && <br />}
+    through a rich variety of arrangements, and our own original works.</div>
+}
+
+const IconList = () => {
+  const isMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+
+  return <div className={isMobile ? "flex text-3xl space-x-4 justify-center" : "flex text-3xl space-x-4 justify-end"}>
+    <SocmedIcon link="https://resonantunion.bandcamp.com/" iconName="fa:bandcamp" />
+    <SocmedIcon link="https://www.youtube.com/@ResonantUnion" iconName="mdi:youtube" />
+    <SocmedIcon link="https://bsky.app/profile/resonantunion.bsky.social" iconName="ri:bluesky-fill" />
+    <SocmedIcon link="https://twitter.com/ResonantUnion" iconName="mdi:twitter" />
+  </div>
+}
 
 const IntroMobile = () => {
   return <div>
-  <div className="py-4 px-4 text-white items-center justify-center">
+    <div className="py-4 px-4 text-white items-center justify-center">
 
-    <div>
-      <div className="font-dmSerif select-none justify-center text-center">
-        <span className="text-xl -mb-1">We are</span>
-        <div className="text-5xl text-orange-500">
-          <span><span className="text-amber-500 text-6xl">R</span>ESONANT</span> &nbsp;
-          <span><span className="text-amber-500 text-6xl">U</span>NION</span>
-        </div>
-      </div>
-    </div>
-
-    <div className="flex flex-row items-center space-x-24 mt-4">
-
-      <div className="flex flex-col space-y-4 z-10 mx-2">
-        <JrpgGradientBox>
-        <div className="flex text-center font-robotoSlab">
-          <div> Resonant Union is a music collective made by VGM fans across the world! <br />
-            (We just so happen to also be musicians.) <br />
-            <br />
-            We joined together to celebrate the legacies of soundtracks we enjoy
-            through a rich variety of arrangements, and our own original works.</div>
-        </div>
-        </JrpgGradientBox>
-
-        <div className = "flex flex-col items-center">
-        <div className = "font-pixelify text-sm mb-2">Check out our socials!</div>
-
-        <div className="flex justify-center text-3xl space-x-4">
-          {/*i probably should have mapped this */}
-          <SocmedIcon link="https://resonantunion.bandcamp.com/" iconName="fa:bandcamp" />
-          <SocmedIcon link="https://www.youtube.com/@ResonantUnion" iconName="mdi:youtube" />
-          <SocmedIcon link="https://bsky.app/profile/resonantunion.bsky.social" iconName="ri:bluesky-fill" />
-          <SocmedIcon link="https://twitter.com/ResonantUnion" iconName="mdi:twitter" />
-        </div>
+      <div>
+        <div className="font-dmSerif select-none justify-center text-center">
+          <span className="text-xl -mb-1">We are</span>
+          <div className="text-5xl text-orange-500">
+            <span><span className="text-amber-500 text-6xl">R</span>ESONANT</span> &nbsp;
+            <span><span className="text-amber-500 text-6xl">U</span>NION</span>
+          </div>
         </div>
       </div>
 
-    </div>
+      <div className="flex flex-row items-center space-x-24 mt-4">
 
-  </div>
-</div>;
+        <div className="flex flex-col space-y-4 z-10 mx-2">
+          <JrpgGradientBox>
+            <div className="flex text-center font-robotoSlab">
+              <IntroBlurb />
+            </div>
+          </JrpgGradientBox>
+
+          <div className="flex flex-col items-center">
+            <div className="font-pixelify text-sm mb-2">Check out our socials!</div>
+            <IconList />
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>;
 }
 
 const Intro = () => {
-  return <div>
-    <div className="py-4 text-white">
+  return <div >
+    <div className="py-4">
 
       <div className="absolute ml-[40%] z-0">
         <img src="RU_colorless.png" className="h-96 w-96" />
@@ -75,8 +88,6 @@ const Intro = () => {
         </div>
       </div>
 
-
-
       <br />
 
       <div className="flex flex-row items-center space-x-24">
@@ -84,20 +95,12 @@ const Intro = () => {
 
         <div className="flex flex-col space-y-4 z-10">
           <div className="flex text-right font-robotoSlab">
-            <div> Resonant Union is a music collective made by VGM fans across the world! <br />
-              (We just so happen to also be musicians.) <br />
-              <br />
-              We joined together to celebrate the legacies of soundtracks we enjoy<br />
-              through a rich variety of arrangements, and our own original works.</div>
+            <IntroBlurb />
+
           </div>
 
-          <div className="flex justify-end text-3xl space-x-4">
-            {/*i probably should have mapped this */}
-            <SocmedIcon link="https://resonantunion.bandcamp.com/" iconName="fa:bandcamp" />
-            <SocmedIcon link="https://www.youtube.com/@ResonantUnion" iconName="mdi:youtube" />
-            <SocmedIcon link="https://bsky.app/profile/resonantunion.bsky.social" iconName="ri:bluesky-fill" />
-            <SocmedIcon link="https://twitter.com/ResonantUnion" iconName="mdi:twitter" />
-          </div>
+          <IconList />
+
         </div>
 
       </div>
@@ -106,13 +109,200 @@ const Intro = () => {
   </div>;
 }
 
+const FeaturedAlbum = () => {
+
+  const [reviewIndex, setReviewIndex] = useState(0)
+
+  //TODO: Migrate this to a .json
+  const textArray = ["The ultimate ZeroRanger arrange album.", "Enjoy nearly 3.5 hours of arrangements from System Erasure's iconic OST to ZeroRanger by eebrozgi!",
+    "Journey through the cycle of ZeroRanger with 48 tracks, arranged by 44 incredible ZeroArrangers, featuring live performances from several musicians and vocalists.",
+    "2025 Game Music Remix Award “Best Album” Winner!"
+  ]
+
+  const reviewsArray = [
+    "“it scared me it was so good. every track is special and so transformative in the best way”",
+    "“a masterclass collection of amazing artists making an all-timer VGM celebration of an indie classic. absolutely not to be missed, this could be the album of the year.”",
+    "“The amount of raw talent on this album is so insane that I started using Bandcamp just to get this album and am using it as a reference for what artists to look for if I'm interested in more music. 10/10 no notes”",
+    "“What can I even say... I am blown away by the utter artistry and care showcased in this project. What an amazing display of creativity and dedication.”",
+    "“How can one album contain so much concentrated fire? May you attain enlightenment.”"
+  ]
+
+
+  const handleReviewIndex = (direction) => {
+    let newReviewIndex = reviewIndex
+    if (direction == "L") {
+      newReviewIndex -= 1
+      if (newReviewIndex < 0) {
+        newReviewIndex = reviewsArray.length - 1
+      }
+    }
+    else if (direction == "R") {
+      newReviewIndex += 1
+      if (newReviewIndex > reviewsArray.length - 1) {
+        newReviewIndex = 0
+      }
+    }
+
+    setReviewIndex(newReviewIndex)
+
+
+  }
+
+
+  return <div className="flex flex-col justify-center text-center space-y-6">
+    <div className="flex flex-row justify-center gap-x-10 align-middle">
+      <div>
+        <div>
+          <iframe className="w-96 h-96"
+            src="https://bandcamp.com/EmbeddedPlayer/album=869133121/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://resonantunion.bandcamp.com/album/zeroranger-arranged-album-green-arrange">ZeroRanger Arranged Album -GREEN ARRANGE- by eebrozgi and Resonant Union</a></iframe>
+        </div>
+        <div className="font-pixelify text-xs text-center mt-2">ZeroRanger Arranged Album<br />-GREEN ARRANGE-</div>
+
+      </div>
+      <div className="flex flex-col items-center text-center gap-y-4">
+        <div className="text-4xl font-dmSerif text-amber-500"> ZeroRanger Arranged Album<br />-GREEN ARRANGE-</div>
+        {
+          textArray.map((text) => { return <div className="w-[32rem] font-robotoSlab"><JrpgGradientBox>{text}</JrpgGradientBox> </div> })
+        }
+
+      </div>
+
+    </div>
+    <div className="flex flex-col justify-center items-center text-center space-y-4">
+      <div className="font-robotoSlab text-green-500"> Reviews for -GREEN ARRANGE- on Bandcamp</div>
+
+      <div className="flex flex-row justify-center text-center items-center space-x-6 w-[80rem] h-24">
+        <div className="hover:text-white text-orange-500 text-3xl select-none"><Icon icon="raphael:arrowleft"
+          onClick={() => handleReviewIndex("L")} /></div>
+        <div className="w-3/4 font-robotoSlab">
+          <JrpgGradientBox>
+            <div className="flex px-20 text-center h-20 items-center justify-center">
+              <i>{reviewsArray[reviewIndex]}</i>
+            </div>
+          </JrpgGradientBox></div>
+        <div className="hover:text-white text-orange-500 text-3xl select-none"><Icon icon="raphael:arrowright"
+          onClick={() => handleReviewIndex("R")} /></div>
+
+      </div>
+
+    </div>
+
+    <div className="font-pixelify flex flex-row items-center text-center justify-center select-none">
+      Can't get enough? View more of our albums &nbsp;<JrpgGradientButton>HERE</JrpgGradientButton>
+    </div>
+  </div>
+}
+
+const FeaturedAlbumMobile = () => {
+
+  const [textIndex, setTextIndex] = useState(0)
+  const [reviewIndex, setReviewIndex] = useState(0)
+
+  //TODO: Migrate this to a .json
+  const textArray = ["The ultimate ZeroRanger arrange album.", "Enjoy nearly 3.5 hours of arrangements from System Erasure's iconic OST to ZeroRanger by eebrozgi!",
+    "Journey through the cycle of ZeroRanger with 48 tracks, arranged by 44 incredible ZeroArrangers, featuring live performances from several musicians and vocalists.",
+    "2025 Game Music Remix Award “Best Album” Winner!"
+  ]
+
+  const reviewsArray = [
+    "“it scared me it was so good. every track is special and so transformative in the best way”",
+    "“a masterclass collection of amazing artists making an all-timer VGM celebration of an indie classic. absolutely not to be missed, this could be the album of the year.”",
+    "“The amount of raw talent on this album is so insane that I started using Bandcamp just to get this album and am using it as a reference for what artists to look for if I'm interested in more music. 10/10 no notes”",
+    "“What can I even say... I am blown away by the utter artistry and care showcased in this project. What an amazing display of creativity and dedication.”",
+    "“How can one album contain so much concentrated fire? May you attain enlightenment.”"
+  ]
+
+
+  const handleTextIndex = (direction) => {
+    let newTextIndex = textIndex
+    if (direction == "L") {
+      newTextIndex -= 1
+      if (newTextIndex < 0) {
+        newTextIndex = textArray.length - 1
+      }
+    }
+    else if (direction == "R") {
+      newTextIndex += 1
+      if (newTextIndex > textArray.length - 1) {
+        newTextIndex = 0
+      }
+    }
+
+    setTextIndex(newTextIndex)
+  }
+
+
+  const handleReviewIndex = (direction) => {
+    let newReviewIndex = reviewIndex
+    if (direction == "L") {
+      newReviewIndex -= 1
+      if (newReviewIndex < 0) {
+        newReviewIndex = reviewsArray.length - 1
+      }
+    }
+    else if (direction == "R") {
+      newReviewIndex += 1
+      if (newReviewIndex > reviewsArray.length - 1) {
+        newReviewIndex = 0
+      }
+    }
+
+    setReviewIndex(newReviewIndex)
+  }
+
+
+  return <div className="flex flex-col justify-center items-center text-center space-y-6">
+      <div className="text-2xl font-dmSerif text-amber-500"> ZeroRanger Arranged Album<br />-GREEN ARRANGE-</div>
+
+      <div>
+        <iframe className="w-40 h-40"
+          src="https://bandcamp.com/EmbeddedPlayer/album=869133121/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://resonantunion.bandcamp.com/album/zeroranger-arranged-album-green-arrange">ZeroRanger Arranged Album -GREEN ARRANGE- by eebrozgi and Resonant Union</a></iframe>
+      </div>
+      <div className="font-pixelify text-xs text-center mt-2">ZeroRanger Arranged Album<br />-GREEN ARRANGE-</div>
+
+    <div className="flex flex-col items-center text-center gap-y-4 font-robotoSlab">
+      <JrpgGradientBox>{textArray[textIndex]}</JrpgGradientBox>
+
+    </div>
+
+    <div className="flex flex-col justify-center items-center text-center space-y-4">
+      <div className="font-robotoSlab text-green-500"> Reviews for -GREEN ARRANGE- on Bandcamp</div>
+
+      <div className="flex flex-row justify-center text-center items-center space-x-6 h-24">
+        <div className="hover:text-white text-orange-500 text-3xl select-none"><Icon icon="raphael:arrowleft"
+          onClick={() => handleReviewIndex("L")} /></div>
+        <div className="w-3/4 font-robotoSlab">
+          <JrpgGradientBox>
+            <div className="flex px-20 text-center h-20 text-sm items-center justify-center">
+              <i>{reviewsArray[reviewIndex]}</i>
+            </div>
+          </JrpgGradientBox></div>
+        <div className="hover:text-white text-orange-500 text-3xl select-none"><Icon icon="raphael:arrowright"
+          onClick={() => handleReviewIndex("R")} /></div>
+
+      </div>
+
+    </div>
+
+    <div className="font-pixelify flex flex-row items-center text-center justify-center select-none">
+      Can't get enough? View more of our albums &nbsp;<JrpgGradientButton>HERE</JrpgGradientButton>
+    </div>
+  </div>
+}
 
 const HomeMobile = () => {
-  return <div><IntroMobile/></div>
+  return <div className="flex flex-col gap-y-4 items-center">
+    <IntroMobile />
+    <FeaturedAlbumMobile />
+  </div>
 }
 
 const HomeDesktop = () => {
-  return <div><Intro/></div>
+  return <div className="flex flex-col gap-y-16 items-center">
+    <Intro />
+    <hr />
+    <FeaturedAlbum />
+  </div>
 }
 
 const Home = () => {
@@ -120,8 +310,8 @@ const Home = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
 
-  return <div className="flex items-center justify-center">
-    {isMobile ? <HomeMobile/> : <HomeDesktop/> }
+  return <div className="flex items-center justify-center  text-white">
+    {isMobile ? <HomeMobile /> : <HomeDesktop />}
   </div>
 };
 

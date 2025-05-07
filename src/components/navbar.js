@@ -7,7 +7,7 @@ import { useMediaQuery } from "react-responsive";
 
 const NavbarDesktop = () => {
     return <div className="w-full text-white">
-        <div className="flex flex-row items-center justify-end mx-16 py-6 gap-4 text-xl font-pixelify">
+        <div className="flex flex-row items-center justify-end mx-16 py-6 gap-4 text-lg font-pixelify">
             {pages.map((page, index) => {
                 return <JrpgGradientButton><Link to={page.path}>{page.label}</Link></JrpgGradientButton>
             })}
