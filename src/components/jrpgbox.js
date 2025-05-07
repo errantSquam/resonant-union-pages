@@ -1,7 +1,7 @@
 export const JrpgGradientButton = ({children}) => {
 
 
-    return <div className="text-xl font-pixelify 
+    return <div className=" 
     transition duration-100
     hover:from-blue-500 hover:to-blue-700 hover:scale-110
     bg-gradient-to-b from-blue-700 from-20% to-slate-950 to-90% 
