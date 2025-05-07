@@ -17,12 +17,14 @@ const NavbarDesktop = () => {
 }
 
 const NavbarMobile = () => {
+
+    const isNotTablet = useMediaQuery({ query: '(max-width: 500px)' })
+
     return <div className="w-full text-white">
-    <div className="flex flex-row items-center justify-center py-4 gap-3 font-pixelify">
+    <div className={`grid ${isNotTablet? "grid-cols-2": "grid-cols-4"} text-center items-center justify-center px-3 py-4 gap-2 font-pixelify text-sm`}>
         {pages.map((page, index) => {
             return <JrpgGradientButton><Link to={page.path}>{page.label}</Link></JrpgGradientButton>
         })}
-        <img className="w-12 h-12" src="RU.png"/>
     </div>
 </div>
 }
