@@ -90,7 +90,7 @@ const Intro = () => {
     <div className="py-4 flex flex-col">
 
       <div className="absolute self-center ml-[40%]">
-        <img src="RU_colorless.png" className="h-96 w-96 relative z-0" />
+        <img src="RU_colorless.png" className="h-96 w-96 relative z-0 select-none" />
       </div>
 
       <div>
