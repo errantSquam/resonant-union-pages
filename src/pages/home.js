@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { JrpgGradientBox, JrpgGradientButton } from "../components/jrpgbox";
 import { useMediaQuery } from "react-responsive";
+import { useInterval } from "usehooks-ts";
 
 //TODO: Migrate this to a .json
 const textArray = ["The ultimate ZeroRanger arrange album.", "Enjoy nearly 3.5 hours of arrangements from System Erasure's iconic OST to ZeroRanger by eebrozgi!",
@@ -24,6 +25,29 @@ const SocmedIcon = ({ link, iconName }) => {
   return <div className="transition duration-100 hover:scale-110 hover:text-orange-400 text-orange-600">
     <a href={link}><Icon icon={iconName} /></a>
   </div>
+}
+
+const AlbumCarousel = () => {
+
+  const imageArray = ["Days.png", "Falcafe.png", "FBR1.png", "FBR2.png", "FBR3.png", "GuruGuru.png", "PAW1.png", "PAW2.png", "Resaga.png", "ZeroRanger.png"]
+
+  const [imageIndex, setImageIndex] = useState(0)
+
+  useInterval(
+    () => {
+      let newImageIndex = imageIndex
+      newImageIndex +=1
+      if (newImageIndex >= imageArray.length) {
+        newImageIndex = 0
+      }
+
+      setImageIndex(newImageIndex)
+    }, 1000
+  )
+
+
+  return <img src={`albums/compressed-album-images/${imageArray[imageIndex]}`} className="w-48 h-48" />
+
 }
 
 const IntroBlurb = () => {
@@ -129,8 +153,7 @@ const Intro = () => {
 
       <div className={`flex flex-row items-center space-x-24 relative z-10 transition duration-[2s] ${loaded ? 'opacity-100' : 'opacity-0'}`}>
         
-        <img src="albums/compressed-album-images/PAW1.png" className="w-48 h-48" />
-
+        <AlbumCarousel/>
         
         <div className="flex flex-col space-y-4 z-10">
           <div className="flex text-right font-robotoSlab">
