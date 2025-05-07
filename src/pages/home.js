@@ -5,6 +5,9 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import { JrpgGradientBox, JrpgGradientButton } from "../components/jrpgbox";
 import { useMediaQuery } from "react-responsive";
 import { useInterval } from "usehooks-ts";
+import { Fade } from "react-slideshow-image";
+import 'react-slideshow-image/dist/styles.css'
+
 
 //TODO: Migrate this to a .json
 const textArray = ["The ultimate ZeroRanger arrange album.", "Enjoy nearly 3.5 hours of arrangements from System Erasure's iconic OST to ZeroRanger by eebrozgi!",
@@ -33,6 +36,7 @@ const AlbumCarousel = () => {
 
   const [imageIndex, setImageIndex] = useState(0)
 
+  {/*
   useInterval(
     () => {
       let newImageIndex = imageIndex
@@ -43,10 +47,20 @@ const AlbumCarousel = () => {
 
       setImageIndex(newImageIndex)
     }, 1000
-  )
+  )*/}
 
 
-  return <img src={`albums/compressed-album-images/${imageArray[imageIndex]}`} className="w-48 h-48" />
+  return <div className = "w-48 h-48 slide-container">
+      <Fade
+      arrows = {false}
+      duration = {1500}
+      canSwipe = {true}>
+        {imageArray.map((image) => {
+        return <div><img src={`albums/compressed-album-images/${image}`} /></div>
+        })
+        }
+      </Fade>
+  </div>
 
 }
 
