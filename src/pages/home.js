@@ -49,7 +49,7 @@ const SpinningDisc = ({image}) => {
 
 const AlbumCarousel = () => {
 
-  const imageArray = ["Days.png", "Falcafe.png", "FBR1.png", "FBR2.png", "FBR3.png", "GuruGuru.png", "PAW1.png", "PAW2.png", "Resaga.png", "ZeroRanger.png"]
+  const imageArray = ["Days.jpg", "Falcafe.jpg", "FBR1.jpg", "FBR2.jpg", "FBR3.jpg", "GuruGuru.jpg", "PAW1.jpg", "PAW2.jpg", "Resaga.jpg", "ZeroRanger.png"]
 
   const [imageIndex, setImageIndex] = useState(0)
 
