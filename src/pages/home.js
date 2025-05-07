@@ -27,7 +27,7 @@ const SocmedIcon = ({ link, iconName }) => {
 
 const IntroBlurb = () => {
 
-  const isMobile = useMediaQuery({ query: '(max-width: 481px)' })
+  const isMobile = useMediaQuery({ query: '(max-width: 1000px)' })
 
   return <div className> Resonant Union is a music collective made by VGM fans across the world! <br />
     (We just so happen to also be musicians.) <br />
@@ -38,7 +38,7 @@ const IntroBlurb = () => {
 }
 
 const IconList = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 481px)' })
+  const isMobile = useMediaQuery({ query: '(max-width: 1000px)' })
 
   return <div className={isMobile ? "flex text-3xl space-x-4 justify-center" : "flex text-3xl space-x-4 justify-end"}>
     <SocmedIcon link="https://resonantunion.bandcamp.com/" iconName="fa:bandcamp" />
@@ -298,7 +298,7 @@ const HomeMobile = () => {
 }
 
 const HomeDesktop = () => {
-  return <div className="flex flex-col">
+  return <div className="flex flex-col min-w-full">
   
 
 
@@ -324,7 +324,7 @@ const HomeDesktop = () => {
 
 const Home = () => {
 
-  const isMobile = useMediaQuery({ query: '(max-width: 481px)' })
+  const isMobile = useMediaQuery({ query: '(max-width: 1000px)' })
 
 
   return <div className="flex items-center justify-center  text-white">
