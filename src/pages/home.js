@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { useEffect } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { JrpgGradientBox, JrpgGradientButton } from "../components/jrpgbox";
 import { useMediaQuery } from "react-responsive";
@@ -85,22 +86,34 @@ const IntroMobile = () => {
 }
 
 const Intro = () => {
+
+  const [loaded, setLoaded] = useState(false);
+
+  const handleLoad = () => {
+    setLoaded(true);
+  }
+
+  useEffect (() => {
+    handleLoad()
+  }, [])
+  
+
   return <div className = "flex flex-col items-center">
 
     <div className="py-4 flex flex-col">
 
-      <div className="absolute self-center ml-[40%]">
+      <div className={`absolute self-center ml-[40%] transition duration-[1.6s] ease-out ${loaded ? 'opacity-100' : 'opacity-40'}`}>
         <img src="RU_colorless.png" className="h-96 w-96 relative z-0 select-none" />
       </div>
 
       <div>
-        <div className="font-dmSerif select-none z-10 relative">
+        <div className={`font-dmSerif select-none z-10 relative transition duration-[1.6s] ease-out ${loaded ? 'opacity-100 -translate-x-0' : 'opacity-0 -translate-x-32'}`}>
           <div className = "flex flex-row space-x-2 items-center">
             {/*<img src = "pointer.gif" className = "h-6"/>*/}
             <span className="text-3xl font-pixelify">We are</span>
 
           </div>
-          <div className="text-8xl text-orange-500">
+          <div className={`text-8xl text-orange-500 transition duration-[1.5s] ease-out ${loaded ? 'opacity-100 -translate-x-0' : 'opacity-30 -translate-x-32'}`}>
             <span><span className="text-amber-500 text-9xl">R</span>ESONANT</span>
             <br />
             <div className = "flex flex-row space-x-2 items-center">
@@ -114,9 +127,11 @@ const Intro = () => {
 
       <br />
 
-      <div className="flex flex-row items-center space-x-24 relative z-10">
+      <div className={`flex flex-row items-center space-x-24 relative z-10 transition duration-[2s] ${loaded ? 'opacity-100' : 'opacity-0'}`}>
+        
         <img src="albums/compressed-album-images/Cover.png" className="w-48 h-48" />
 
+        
         <div className="flex flex-col space-y-4 z-10">
           <div className="flex text-right font-robotoSlab">
             <IntroBlurb />

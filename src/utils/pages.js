@@ -1,3 +1,4 @@
+
 export const pages = [
     {
         label: "Home",
@@ -10,5 +11,9 @@ export const pages = [
     {
         label: "Members",
         path: "members"
+    },
+    {
+        label: "Contact",
+        path:"contact"
     }
 ]

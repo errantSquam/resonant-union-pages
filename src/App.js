@@ -3,6 +3,7 @@ import Root from "./pages/root";
 import Members from "./pages/members";
 import Albums from "./pages/albums";
 import Home from "./pages/home";
+import Contact from "./pages/contact";
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="albums" element={<Albums />} />
           <Route path="members" element={<Members />} />
+          <Route path="contact" element = {<Contact/>}/>
           {/* <Route path="*" element={<NoMatch />} /> */}
         </Route>
       </Routes>
