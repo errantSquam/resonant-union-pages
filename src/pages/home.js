@@ -1,10 +1,8 @@
 import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { JrpgGradientBox, JrpgGradientButton } from "../components/jrpgbox";
 import { useMediaQuery } from "react-responsive";
-import { useInterval } from "usehooks-ts";
 import { Fade } from "react-slideshow-image";
 import 'react-slideshow-image/dist/styles.css'
 import SpinningDisc from "../components/spinningdisc";
@@ -25,24 +23,7 @@ const SocmedIcon = ({ link, iconName }) => {
 
 const AlbumCarousel = () => {
 
-
-  const [imageIndex, setImageIndex] = useState(0)
-
-  {/*
-  useInterval(
-    () => {
-      let newImageIndex = imageIndex
-      newImageIndex +=1
-      if (newImageIndex >= imageArray.length) {
-        newImageIndex = 0
-      }
-
-      setImageIndex(newImageIndex)
-    }, 1000
-  )*/}
-
-
-  return <div className = "flex flex-row">
+  return <div className = "flex flex-row mt-4">
     <div className="w-48 h-48 rounded overflow-hidden">
       <Fade
         arrows={false}
@@ -50,7 +31,7 @@ const AlbumCarousel = () => {
         infinite={true}>
         {imageArray.map((image) => {
           return <div>
-            <img src={`albums/compressed-album-images/${image}`}/>
+            <img src={`albums/compressed-album-images/${image}`} alt="albums-carousel"/>
 
           </div>
         })
@@ -77,7 +58,7 @@ const IntroBlurb = () => {
 
   const isMobile = useMediaQuery({ query: '(max-width: 1000px)' })
 
-  return <div className> Resonant Union is a music collective made by VGM fans across the world! <br />
+  return <div className="mt-4"> Resonant Union is a music collective made by VGM fans across the world! <br />
     (We just so happen to also be musicians.) <br />
     <br />
     We joined together to celebrate the legacies of soundtracks we enjoy
@@ -89,7 +70,7 @@ const IconList = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 1000px)' })
 
   return <div className={isMobile ? "flex text-3xl space-x-4 justify-center" : "flex text-3xl space-x-4 justify-end"}>
-    <SocmedIcon link="https://resonantunion.bandcamp.com/" iconName="fa:bandcamp" />
+    <div className="text-2xl flex flex-col justify-center items-center"><SocmedIcon link="https://resonantunion.bandcamp.com/" iconName="fa:bandcamp" /></div>
     <SocmedIcon link="https://www.youtube.com/@ResonantUnion" iconName="mdi:youtube" />
     <SocmedIcon link="https://bsky.app/profile/resonantunion.bsky.social" iconName="ri:bluesky-fill" />
     <SocmedIcon link="https://twitter.com/ResonantUnion" iconName="mdi:twitter" />
@@ -157,7 +138,7 @@ const Intro = () => {
     <div className="py-4 flex flex-col">
 
       <div className={`absolute self-center ml-[40%] transition duration-[1.6s] ease-out ${loaded ? 'opacity-100' : 'opacity-20'}`}>
-        <img src="RU_colorless.png" className="h-96 w-96 relative z-0 select-none" />
+        <img src="RU_colorless.png" className="h-96 w-96 relative z-0 select-none" alt="RU-Logo-Silhouette" />
       </div>
 
       <div>
@@ -192,7 +173,7 @@ const Intro = () => {
           </div>
           <div className="flex flex-row items-center justify-end space-x-2">
             <div className="font-pixelify text-sm">Visit our socials!</div>
-            <img src="pointer.gif" className="h-6" />
+            <img src="pointer.gif" className="h-6" alt="pointer-gif"/>
             <IconList />
           </div>
 
@@ -212,13 +193,13 @@ const FeaturedAlbum = () => {
 
   const handleReviewIndex = (direction) => {
     let newReviewIndex = reviewIndex
-    if (direction == "L") {
+    if (direction === "L") {
       newReviewIndex -= 1
       if (newReviewIndex < 0) {
         newReviewIndex = reviewsArray.length - 1
       }
     }
-    else if (direction == "R") {
+    else if (direction === "R") {
       newReviewIndex += 1
       if (newReviewIndex > reviewsArray.length - 1) {
         newReviewIndex = 0
@@ -237,7 +218,7 @@ const FeaturedAlbum = () => {
       <div className="flex flex-row justify-center gap-x-10 align-middle">
         <div>
           <div>
-            <iframe className="w-96 h-96"
+            <iframe className="w-96 h-96" title="bandcamp-player"
               src="https://bandcamp.com/EmbeddedPlayer/album=869133121/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://resonantunion.bandcamp.com/album/zeroranger-arranged-album-green-arrange">ZeroRanger Arranged Album -GREEN ARRANGE- by eebrozgi and Resonant Union</a></iframe>
           </div>
           <div className="font-pixelify text-xs text-center mt-2">ZeroRanger Arranged Album<br />-GREEN ARRANGE-</div>
@@ -290,13 +271,13 @@ const FeaturedAlbumMobile = () => {
 
   const handleTextIndex = (direction) => {
     let newTextIndex = textIndex
-    if (direction == "L") {
+    if (direction === "L") {
       newTextIndex -= 1
       if (newTextIndex < 0) {
         newTextIndex = textArray.length - 1
       }
     }
-    else if (direction == "R") {
+    else if (direction === "R") {
       newTextIndex += 1
       if (newTextIndex > textArray.length - 1) {
         newTextIndex = 0
@@ -308,13 +289,13 @@ const FeaturedAlbumMobile = () => {
 
   const handleReviewIndex = (direction) => {
     let newReviewIndex = reviewIndex
-    if (direction == "L") {
+    if (direction === "L") {
       newReviewIndex -= 1
       if (newReviewIndex < 0) {
         newReviewIndex = reviewsArray.length - 1
       }
     }
-    else if (direction == "R") {
+    else if (direction === "R") {
       newReviewIndex += 1
       if (newReviewIndex > reviewsArray.length - 1) {
         newReviewIndex = 0
@@ -330,7 +311,7 @@ const FeaturedAlbumMobile = () => {
       <span className="text-emerald-600">-GREEN ARRANGE-</span></div>
 
     <div>
-      <iframe className="w-40 h-40"
+      <iframe className="w-40 h-40" title="bandcamp-player"
         src="https://bandcamp.com/EmbeddedPlayer/album=869133121/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://resonantunion.bandcamp.com/album/zeroranger-arranged-album-green-arrange">ZeroRanger Arranged Album -GREEN ARRANGE- by eebrozgi and Resonant Union</a></iframe>
     </div>
     <div className="font-pixelify text-xs text-center mt-2">ZeroRanger Arranged Album<br />-GREEN ARRANGE-</div>
@@ -394,7 +375,7 @@ const HomeMobile = () => {
     </div>
     
     <div className="min-w-full z-10 relative">
-      <img src="ga_bg_animation.gif" className="absolute min-w-full h-full" />
+      <img src="ga_bg_animation.gif" className="absolute min-w-full h-full" alt="featured-section-bg"/>
 
       <div className="absolute bg-gradient-to-b from-slate-950/100 from-10% 
       to-black/0 to-20% min-w-full h-full"/>
@@ -421,7 +402,7 @@ const HomeDesktop = () => {
     </div>
 
     <div className="min-w-full">
-      <img src="ga_bg_animation.gif" className="absolute min-w-full h-full" />
+      <img src="ga_bg_animation.gif" className="absolute min-w-full h-full" alt="featured-section-bg"/>
 
       <div className="absolute bg-gradient-to-b from-slate-950/100 from-10% 
       to-black/0 to-20% min-w-full h-full"/>
