@@ -14,7 +14,7 @@ const MemberCard = ({ member }) => {
             </div>
 
             <JrpgGradientBoxVariant color={member.color}>
-                <div className="flex flex-col items-start justify-evenly min-h-[16rem] ">
+                <div className="flex flex-col items-start justify-evenly min-h-[16rem] space-y-8">
                     {member.desc?.split('|').map((paragraph, index) => {
                         return <div className="text-xl" key={index}>{paragraph}</div>
                     })}
@@ -39,7 +39,7 @@ const Members = () => {
     return <div className="w-full">
         <div className="flex flex-col justify-items items-center space-y-8">
             <HeaderText text={"MEMBERS"} isLoaded={loaded}/>
-            <div className="flex flex-col justify-center items-center space-y-8">
+            <div className="flex flex-col justify-center items-center space-y-16 lg:space-y-8">
                 {
                     members.map((member, index) => {
                         return <MemberCard member={member} key={index} />
