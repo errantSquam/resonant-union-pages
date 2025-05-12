@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 const AlbumBox = ({ album, onClickCallback }) => {
     return <div className="flex flex-col justify-center items-center space-y-8">
-        <div className="w-64 h-64 hover:scale-105 transition duration-100 cursor-pointer" onClick={() => {onClickCallback(album, true)}}><img src={album.cover} alt={album.title} /></div>
+        <div className="w-64 h-64 hover:scale-105 transition duration-100 cursor-pointer" onClick={() => {onClickCallback(album)}}><img src={album.cover} alt={album.title} /></div>
         <JrpgGradientBox><div className="font-robotoSlab text-white">{album.title}</div></JrpgGradientBox>
     </div>
 }
@@ -23,13 +23,14 @@ const Albums = () => {
         handleLoad()
     }, [])
 
-    const onAlbumClick = ({album, isVisible}) => {
-        setIsModalVisible(isVisible)
+    const onAlbumClick = (album) => {
         setModalAlbum(album)
+        setIsModalVisible(true)
+        console.log(isModalVisible)
     }
 
     return <div className="w-full">
-        <AlbumsModal album={modalAlbum} isOpen={true} onClickCallback={onAlbumClick} />
+        <AlbumsModal album={modalAlbum} isOpen={isModalVisible} onClickCallback={setIsModalVisible}/>
         <div className="flex flex-col justify-items items-center space-y-8">
             <div className={`font-dmSerif select-none z-10 relative transition duration-[1.6s] ease-out ${loaded ? 'opacity-100 -translate-x-0' : 'opacity-0 -translate-x-32'}`}>
                 <div className={`text-8xl text-orange-500 transition duration-[1.5s] ease-out ${loaded ? 'opacity-100 -translate-x-0' : 'opacity-30 -translate-x-32'}`}>

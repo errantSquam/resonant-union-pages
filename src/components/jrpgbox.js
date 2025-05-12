@@ -20,3 +20,13 @@ export const JrpgGradientBox = ({children}) => {
         {children}
         </div>
 }
+
+export const JrpgGradientBoxExpand = ({children}) => {
+
+
+    return <div className="
+    bg-gradient-to-b from-blue-700/75 from-20% to-slate-950/75 to-90% 
+    px-5 py-3 border border-2 border-white rounded-md w-full h-full overflow-y-auto ">
+        {children}
+        </div>
+}
