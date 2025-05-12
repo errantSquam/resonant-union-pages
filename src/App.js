@@ -8,7 +8,7 @@ import Contact from "./pages/contact";
 export default function App() {
   return (
       <Routes>
-        <Route path="/" element={<Root />}>
+        <Route path="/resonant-union-pages" element={<Root />}>
           <Route index element={<Home />} />
           <Route path="albums" element={<Albums />} />
           <Route path="members" element={<Members />} />
