@@ -38,7 +38,7 @@ const Albums = () => {
 
                 </div>
             </div>
-            <div className={`w-fit mx-auto grid grid-cols-3 gap-12 transition duration-[2.0s] ease-out ${loaded ? 'opacity-100' : 'opacity-0'}`}>
+            <div className={`w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 transition duration-[2.0s] ease-out ${loaded ? 'opacity-100' : 'opacity-0'}`}>
                 {
                     albums.map((album, index) => {
                         return <div key={index}><AlbumBox album={album} onClickCallback={onAlbumClick}/></div>

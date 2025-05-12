@@ -19,19 +19,19 @@ export const AlbumsModal = ({ album, isOpen, onClickCallback }) => {
         <div className="absolute top-[10%] left-[25%] w-[50%] h-[10%]" ref={modalHeaderRef}>
             <div className="w-full h-full">
                 <JrpgGradientBoxExpand>
-                    <div className="flex flex-row w-full justify-center items-center text-3xl font-pixelify text-white">{album.title}</div>
+                    <div className="flex flex-row w-full h-full justify-center items-center text-lg lg:text-3xl font-pixelify text-white">{album.title}</div>
                 </JrpgGradientBoxExpand>
             </div>
         </div>
         <div className="absolute top-[25%] left-[15%] w-[70%] h-[60%] z-30" ref={modalBodyRef}>
             <div className="w-full h-full">
                 <JrpgGradientBoxExpand >
-                    <div className="flex flex-row items-start justify-center h-full gap-x-14 mx-8 my-8" ref={modalBodyRef}>
+                    <div className="flex flex-col-reverse lg:flex-row items-center lg:items-start justify-end lg:justify-center h-full lg:gap-x-14 mx-8 my-8" ref={modalBodyRef}>
                         <div className="flex flex-col items-center justify-center space-y-4 pb-8">
                             <img src={album.cover} alt="album-cover" className="w-[24rem]" />
                             <iframe src={album.youtubeLink}></iframe>
                         </div>
-                        <div className="flex flex-col items-center justify-center space-y-8 text-xl lg:text-2xl font-pixelify text-white">
+                        <div className="flex flex-col items-center justify-center space-y-8 text-xl lg:text-2xl font-pixelify text-white pb-8 lg:pb-0">
                             {album.desc?.split('|').map((paragraph, index) => {
                                 return <div>
                                     {paragraph}
