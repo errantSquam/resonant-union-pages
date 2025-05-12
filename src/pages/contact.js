@@ -20,10 +20,8 @@ const FormComponent = () => {
     });
 
     function onSubmit(e){
-        e.preventDefault();
-        e.stopPropagation();
 
-        let name = e.firstName + e.lastName
+        let name = e.firstName + " " + e.lastName
         let email = e.email 
         let message = e.message
     
@@ -38,7 +36,9 @@ const FormComponent = () => {
         .then(response => response.json())
         .then(response => {
           if (response.code === 200) {
-            alert("We received your submission, thank you!");
+            alert("Your submission has been received. Thank you!");
+            window.location.reload()
+
           }
           else if(response.code === 422){
             // Field validation failed

@@ -2,7 +2,7 @@ export const members = [
     {
         name: "MB",
         picture: "/members/M01.jpg",
-        desc: "Hey! My name is Michael—although most people just call me MB. I'm a composer and arranger based in Australia.| I organised the \"Perfect Arrange Work\" series of albums for Resonant Union. I love JRPGs and perhaps play a little too many of them, haha.", 
+        desc: "Hey! My name is Michael—although most people just call me MB. I'm a composer and arranger based in Australia.| I organised the \"Perfect Arrange Works\" series of albums for Resonant Union. I love JRPGs and perhaps play a little too many of them, haha.", 
         note: "Xenoblade Chronicles X Enthusiast",
         link: "https://linktr.ee/mbgov1133",
         color: "red"
