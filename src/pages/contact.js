@@ -19,7 +19,41 @@ const FormComponent = () => {
         }
     });
 
-    const onSubmit = data => console.log(data); //TODO
+    function onSubmit(e){
+        e.preventDefault();
+        e.stopPropagation();
+
+        let name = e.firstName + e.lastName
+        let email = e.email 
+        let message = e.message
+    
+        fetch("https://formcarry.com/s/4GWDTbXyMNo", {
+          method: 'POST',
+          headers: { 
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ name, email, message })
+        })
+        .then(response => response.json())
+        .then(response => {
+          if (response.code === 200) {
+            alert("We received your submission, thank you!");
+          }
+          else if(response.code === 422){
+            // Field validation failed
+            alert(response.message)
+          }
+          else {
+            // other error from formcarry
+            alert(response.message)
+          }
+        })
+        .catch(error => {
+          // request related error.
+          alert(error.message ? error.message : error);
+        });
+      }
 
     return <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-8">
         <div className="flex flex-col lg:flex-row space-y-6 lg:space-y-0 gap-x-4 w-full justify-evenly">
