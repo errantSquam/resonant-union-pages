@@ -21,6 +21,36 @@ export const JrpgGradientBox = ({children}) => {
         </div>
 }
 
+export const JrpgGradientBoxRed = ({children}) => {
+
+
+    return <div className="
+    bg-gradient-to-b from-red-700/50 from-20% to-slate-950/50 to-90% 
+    px-5 py-3 border border-2 border-white rounded-md">
+        {children}
+        </div>
+}
+
+export const JrpgGradientBoxGreen = ({children}) => {
+
+
+    return <div className="
+    bg-gradient-to-b from-green-700/50 from-20% to-slate-950/50 to-90% 
+    px-5 py-3 border border-2 border-white rounded-md">
+        {children}
+        </div>
+}
+
+export let JrpgGradientBoxVariant = ({color, children}) => {
+    if (color === "red") {
+        return JrpgGradientBoxRed({children})
+    } else if (color === "green") {
+        return JrpgGradientBoxGreen({children})
+    } else {
+        return JrpgGradientBox({children})
+    }
+}
+
 export const JrpgGradientBoxExpand = ({children}) => {
 
 

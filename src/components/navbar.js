@@ -11,7 +11,7 @@ const NavbarDesktop = () => {
             {pages.map((page, index) => {
                 return <JrpgGradientButton><Link to={page.path}>{page.label}</Link></JrpgGradientButton>
             })}
-            <img className="w-12 h-12" src="RU.png"/>
+            <img className="w-12 h-12" src="/RU.png"/>
         </div>
     </div>
 }
