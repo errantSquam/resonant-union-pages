@@ -10,9 +10,9 @@ export default function App() {
       <Routes>
         <Route path="/resonant-union-pages" element={<Root />}>
           <Route index element={<Home />} />
-          <Route path="albums" element={<Albums />} />
-          <Route path="members" element={<Members />} />
-          <Route path="contact" element = {<Contact/>}/>
+          <Route path="/resonant-union-pages/albums" element={<Albums />} />
+          <Route path="/resonant-union-pages/members" element={<Members />} />
+          <Route path="/resonant-union-pages/contact" element = {<Contact/>}/>
           {/* <Route path="*" element={<NoMatch />} /> */}
         </Route>
       </Routes>

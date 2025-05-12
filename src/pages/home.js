@@ -138,7 +138,7 @@ const Intro = () => {
     <div className="py-4 flex flex-col">
 
       <div className={`absolute self-center ml-[40%] transition duration-[1.6s] ease-out ${loaded ? 'opacity-100' : 'opacity-20'}`}>
-        <img src="RU_colorless.png" className="h-96 w-96 relative z-0 select-none" alt="RU-Logo-Silhouette" />
+        <img src="./RU_colorless.png" className="h-96 w-96 relative z-0 select-none" alt="RU-Logo-Silhouette" />
       </div>
 
       <div>
@@ -173,7 +173,7 @@ const Intro = () => {
           </div>
           <div className="flex flex-row items-center justify-end space-x-2">
             <div className="font-pixelify text-sm">Visit our socials!</div>
-            <img src="pointer.gif" className="h-6" alt="pointer-gif"/>
+            <img src="./pointer.gif" className="h-6" alt="pointer-gif"/>
             <IconList />
           </div>
 
@@ -219,7 +219,7 @@ const FeaturedAlbum = () => {
         <div>
           <div>
             <iframe className="w-96 h-96" title="bandcamp-player"
-              src="https://bandcamp.com/EmbeddedPlayer/album=869133121/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://resonantunion.bandcamp.com/album/zeroranger-arranged-album-green-arrange">ZeroRanger Arranged Album -GREEN ARRANGE- by eebrozgi and Resonant Union</a></iframe>
+              src="./https://bandcamp.com/EmbeddedPlayer/album=869133121/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://resonantunion.bandcamp.com/album/zeroranger-arranged-album-green-arrange">ZeroRanger Arranged Album -GREEN ARRANGE- by eebrozgi and Resonant Union</a></iframe>
           </div>
           <div className="font-pixelify text-xs text-center mt-2">ZeroRanger Arranged Album<br />-GREEN ARRANGE-</div>
 
@@ -312,7 +312,7 @@ const FeaturedAlbumMobile = () => {
 
     <div>
       <iframe className="w-40 h-40" title="bandcamp-player"
-        src="https://bandcamp.com/EmbeddedPlayer/album=869133121/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://resonantunion.bandcamp.com/album/zeroranger-arranged-album-green-arrange">ZeroRanger Arranged Album -GREEN ARRANGE- by eebrozgi and Resonant Union</a></iframe>
+        src="./https://bandcamp.com/EmbeddedPlayer/album=869133121/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://resonantunion.bandcamp.com/album/zeroranger-arranged-album-green-arrange">ZeroRanger Arranged Album -GREEN ARRANGE- by eebrozgi and Resonant Union</a></iframe>
     </div>
     <div className="font-pixelify text-xs text-center mt-2">ZeroRanger Arranged Album<br />-GREEN ARRANGE-</div>
 
@@ -375,7 +375,7 @@ const HomeMobile = () => {
     </div>
     
     <div className="min-w-full z-10 relative">
-      <img src="ga_bg_animation.gif" className="absolute min-w-full h-full" alt="featured-section-bg"/>
+      <img src="./ga_bg_animation.gif" className="absolute min-w-full h-full" alt="featured-section-bg"/>
 
       <div className="absolute bg-gradient-to-b from-slate-950/100 from-10% 
       to-black/0 to-20% min-w-full h-full"/>
@@ -402,7 +402,7 @@ const HomeDesktop = () => {
     </div>
 
     <div className="min-w-full">
-      <img src="ga_bg_animation.gif" className="absolute min-w-full h-full" alt="featured-section-bg"/>
+      <img src="./ga_bg_animation.gif" className="absolute min-w-full h-full" alt="featured-section-bg"/>
 
       <div className="absolute bg-gradient-to-b from-slate-950/100 from-10% 
       to-black/0 to-20% min-w-full h-full"/>
