@@ -6,6 +6,8 @@ import Home from "./pages/home";
 import Contact from "./pages/contact";
 import { Reel } from "./pages/reel";
 
+import { HashRouter } from "react-router-dom";
+
 export default function App() {
   return (
       <Routes>
