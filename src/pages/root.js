@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/navbar";
+import { Link } from "react-router-dom";
 
 //OPTIMIZATION TODO: 
 // 1. SELF HOST GOOGLE FONTS
@@ -10,6 +11,10 @@ function Root() {
       <div className="bg-gradient-to-bl from-blue-600 from-0% to-slate-950 to-50% min-h-screen min-w-full pb-32">
         <Navbar />
         <Outlet />
+
+        <div className = "text-zinc-500 font-pixelify w-full text-center mt-10">
+        Coded by <u><Link to = "https://heckingsne.cc">ErrantSquam</Link></u> and <u><Link to = "https://bsky.app/profile/kimmykitsuragi.bsky.social">KimmyKitsuragi</Link></u>.
+        </div>
       </div>
     );
   }
