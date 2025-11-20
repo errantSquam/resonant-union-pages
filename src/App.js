@@ -4,6 +4,7 @@ import Members from "./pages/members";
 import Albums from "./pages/albums";
 import Home from "./pages/home";
 import Contact from "./pages/contact";
+import { Reel } from "./pages/reel";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
           <Route path="albums" element={<Albums />} />
           <Route path="members" element={<Members />} />
           <Route path="contact" element = {<Contact/>}/>
+          <Route path = "reel" element = {<Reel/>}/>
           {/* <Route path="*" element={<NoMatch />} /> */}
         </Route>
       </Routes>

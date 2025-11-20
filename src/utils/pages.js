@@ -5,6 +5,11 @@ export const pages = [
         path: ""
     },
     {
+        label: "Reel",
+        path: "reel"
+
+    },
+    {
         label: "Albums",
         path: "albums"
     },
