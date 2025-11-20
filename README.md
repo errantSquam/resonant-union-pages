@@ -13,6 +13,8 @@
 
 # Editing Contents
 
-As of now, the various albums can be edited in ``albumsInfo.js`` and members in ``memberInfo.js``. No support for featured album editing yet, since it's a bit custom. It supports plain text, but let me know if you'd like Markdown support, because that shouldn't be too hard to implement. 
+As of now, the various albums can be edited in ``albumsInfo.js`` and members in ``memberInfo.js``. These are found in the ``src/const/`` directory.
+
+No support for featured album editing yet, since it's a bit custom. It supports plain text, but let me know if you'd like Markdown support, because that shouldn't be too hard to implement. 
 
 Most of the fields are self explanatory. The files for ANY asset should be stored in the ``public`` folder, and the filepath should always start with `./`. Not `/`. This is to ensure the images load properly when deployed.
