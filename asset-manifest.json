@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "./static/css/main.ccdf3a6a.css",
-    "main.js": "./static/js/main.01cacad1.js",
-    "index.html": "./index.html",
-    "main.ccdf3a6a.css.map": "./static/css/main.ccdf3a6a.css.map",
-    "main.01cacad1.js.map": "./static/js/main.01cacad1.js.map"
+    "main.css": "/resonant-union-pages/static/css/main.97ee6b82.css",
+    "main.js": "/resonant-union-pages/static/js/main.0fd76486.js",
+    "index.html": "/resonant-union-pages/index.html",
+    "main.97ee6b82.css.map": "/resonant-union-pages/static/css/main.97ee6b82.css.map",
+    "main.0fd76486.js.map": "/resonant-union-pages/static/js/main.0fd76486.js.map"
   },
   "entrypoints": [
-    "static/css/main.ccdf3a6a.css",
-    "static/js/main.01cacad1.js"
+    "static/css/main.97ee6b82.css",
+    "static/js/main.0fd76486.js"
   ]
 }
