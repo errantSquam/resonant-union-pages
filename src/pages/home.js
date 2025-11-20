@@ -38,18 +38,6 @@ const AlbumCarousel = () => {
         }
       </Fade>
     </div>
-    {/*
-    <div className="w-48 h-48 -mt-[100%] -ml-[70%] bg-black">
-      <div>
-
-            <div className = "relative w-full z-30">
-              <div className="rounded overflow-hidden w-48 h-48 flex items-center justify-center bg-slate-700">
-                <img src='RU.png' className = "w-20 h-20"/>
-              </div>
-            </div>
-
-          </div>
-    </div>*/}
   </div>
 
 }
@@ -90,10 +78,6 @@ const IntroMobile = () => {
               <span><span className="text-amber-500 text-5xl">U</span>NION</span>
             </div>
 
-          {/*<img src = "RU.png" className = "w-20 h-20 animate-bounce mt-6"/>*/}
-          {/*<div className = "scale-50 scale-y-[0.2] -my-10 -mx-10 relative">
-            <SpinningDisc image = "RU.png"/>
-          </div>*/}
         </div>
       </div>
 
@@ -138,13 +122,12 @@ const Intro = () => {
     <div className="py-4 flex flex-col">
 
       <div className={`absolute self-center ml-[40%] transition duration-[1.6s] ease-out ${loaded ? 'opacity-100' : 'opacity-20'}`}>
-        <img src="RU_colorless.png" className="h-96 w-96 relative z-0 select-none" alt="RU-Logo-Silhouette" />
+        <img src="./RU_colorless.png" className="h-96 w-96 relative z-0 select-none" alt="RU-Logo-Silhouette" />
       </div>
 
       <div>
         <div className={`font-dmSerif select-none z-10 relative transition duration-[1.6s] ease-out ${loaded ? 'opacity-100 -translate-x-0' : 'opacity-0 -translate-x-32'}`}>
           <div className="flex flex-row space-x-2 items-center">
-            {/*<img src = "pointer.gif" className = "h-6"/>*/}
             <span className="text-3xl font-pixelify">We are</span>
 
           </div>
@@ -153,7 +136,6 @@ const Intro = () => {
             <br />
             <div className="flex flex-row space-x-2 items-center">
               <span><span className="text-amber-500 text-9xl">U</span>NION</span>
-              {/*<img src = "pointer_flipped.gif" className = "h-6 mt-6"/>*/}
             </div>
 
           </div>
@@ -173,7 +155,7 @@ const Intro = () => {
           </div>
           <div className="flex flex-row items-center justify-end space-x-2">
             <div className="font-pixelify text-sm">Visit our socials!</div>
-            <img src="pointer.gif" className="h-6" alt="pointer-gif"/>
+            <img src="./pointer.gif" className="h-6" alt="pointer-gif"/>
             <IconList />
           </div>
 
@@ -375,7 +357,7 @@ const HomeMobile = () => {
     </div>
     
     <div className="min-w-full z-10 relative">
-      <img src="ga_bg_animation.gif" className="absolute min-w-full h-full" alt="featured-section-bg"/>
+      <img src="./ga_bg_animation.gif" className="absolute min-w-full h-full" alt="featured-section-bg"/>
 
       <div className="absolute bg-gradient-to-b from-slate-950/100 from-10% 
       to-black/0 to-20% min-w-full h-full"/>
@@ -402,7 +384,7 @@ const HomeDesktop = () => {
     </div>
 
     <div className="min-w-full">
-      <img src="ga_bg_animation.gif" className="absolute min-w-full h-full" alt="featured-section-bg"/>
+      <img src="./ga_bg_animation.gif" className="absolute min-w-full h-full" alt="featured-section-bg"/>
 
       <div className="absolute bg-gradient-to-b from-slate-950/100 from-10% 
       to-black/0 to-20% min-w-full h-full"/>
