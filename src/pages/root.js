@@ -13,7 +13,7 @@ function Root() {
         <Outlet />
 
         <div className = "text-zinc-500 font-pixelify w-full text-center mt-10">
-        Coded by <u><Link to = "https://heckingsne.cc">ErrantSquam</Link></u> and <u><Link to = "https://bsky.app/profile/kimmykitsuragi.bsky.social">KimmyKitsuragi</Link></u>.
+        Coded by <u><Link to = "https://heckingsne.cc">ErrantSquam</Link></u> and KimmyKitsuragi.
         </div>
       </div>
     );
